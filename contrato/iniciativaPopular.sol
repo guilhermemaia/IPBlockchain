@@ -16,3 +16,10 @@ contract LeiDeIniciativaPopular {
         nomeEmpresa = "Proposta de Lei de Iniciativa Popular";
         proponente = msg.sender;
     }
+
+    function definirTituloDaIniciativa(string qualTituloDaIniciativa) public somenteProponente  {
+        tituloDaIniciativa = qualTituloDaIniciativa;
+    }
+    
+    
+    
