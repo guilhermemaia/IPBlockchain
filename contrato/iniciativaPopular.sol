@@ -3,6 +3,7 @@ pragma solidity 0.4.25;
 contract LeiDeIniciativaPopular {
 	
     string public tituloDaIniciativa;
+    string public textoDaProposta;
     address proponente;
     address assinante;
 	
