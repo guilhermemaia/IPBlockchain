@@ -13,7 +13,7 @@ contract LeiDeIniciativaPopular {
     }
 
     constructor() public {
-        nomeEmpresa = "Proposta de Lei de Iniciativa Popular";
+        tituloDaIniciativa = "Proposta de Lei de Iniciativa Popular";
         proponente = msg.sender;
     }
 
