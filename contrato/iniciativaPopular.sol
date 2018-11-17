@@ -3,6 +3,7 @@ pragma solidity 0.4.25;
 contract LeiDeIniciativaPopular {
 	
     string public tituloDaIniciativa;
+    string public ementaDaProposta;
     string public textoDaProposta;
     address proponente;
     address assinante;
@@ -21,5 +22,12 @@ contract LeiDeIniciativaPopular {
         tituloDaIniciativa = qualTituloDaIniciativa;
     }
     
+    function definirEmentaDaProposta(string qualEmentaDaProposta) public somenteProponente  {
+        ementaDaProposta = qualEmentaDaProposta;
+    }
+    
+    function definirTextoDaProposta(string qualTextoDaProposta) public somenteProponente  {
+        textoDaProposta = qualTextoDaProposta;
+    }
     
     
