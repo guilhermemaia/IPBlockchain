@@ -5,13 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        media="screen,projection" />
-
+    <link rel="stylesheet" media="screen,projection" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <title>Proposta de Lei de Iniciativa Popular</title>
 </head>
 
@@ -21,7 +18,7 @@
 
         <nav>
             <div class="nav-wrapper green darken-1">
-                <a href="#" class="brand-logo">IPBlockchain</a>
+                <a href="/" class="brand-logo">IPBlockchain</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="proponente.html">Proponente</a></li>
                     <li><a href="votacao.html">Resultado da Votação</a></li>
@@ -30,19 +27,20 @@
             </div>
         </nav>
 
-        <div class="row">
+        <div class="row card-panel">
             <div class="col s10 offset-s1">
                 <h4>Assine a Proposta de Lei de Iniciativa Popular: <span id="spanTituloDaProposta"></span></h4>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row card-panel deep-orange lighten-1">
             <div class="col s10 offset-s1">
-                <p id="statusConexao" class="flow-text"></p>
+                <p id="statusConexao" class="flow-text">Lorem, ipsum dolor sit amet consectetur
+                    adipisicing.</p>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row card-panel">
 
             <form class="col s10 offset-s1" action="#" id="formNomeSignatario" name="formNomeSignatario">
 
@@ -78,44 +76,20 @@
                 <div class="row">
                     <div class="input-field">
                         <i class="material-icons prefix">map</i>
-                        <select name=" UnidadeDaFerderacao">
-                            <option value="" disabled selected>Selecione um Estado</option>
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
+
+                        <select id="estados">
+                            <option value=""></option>
                         </select>
-                        <label>Unidade da Federação:</label>
+                        <select id="cidades">
+                        </select>
+
                     </div>
                 </div> <!-- end Row endereço do signatário -->
 
             </form>
 
             <div class="col s10 offset-s1">
-                <button class="btn-small waves-effect waves-light" type="submit" name="action" onclick="assinar(); return false;">Assinar
+                <button class="btn-small btn-block waves-effect waves-light" type="submit" name="action" onclick="assinar(); return false;">Assinar
                     Proposta de Lei de Iniciativa Popular na Blockchain
                     <i class="material-icons right">send</i>
                 </button>
@@ -141,10 +115,10 @@
                         eleitores
                         de cada um deles.</p>
 
-                    <p class="grey-text text-lighten-4"></p>Conseguidas as assinaturas, o projeto deve ser
-                    protocolado
-                    junto à Secretaria-Geral da Mesa da
-                    Câmara dos Deputados.
+                    <p class="grey-text text-lighten-4">Conseguidas as assinaturas, o projeto deve ser
+                        protocolado
+                        junto à Secretaria-Geral da Mesa da
+                        Câmara dos Deputados.
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
@@ -166,40 +140,20 @@
         </div>
     </footer>
 
-
-
-    <!--JavaScript at end of body for optimized loading-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-
-        // https://materializecss.com/select.html - com jquery
-        $(document).ready(function () {
-            $('select').formSelect();
-        });
-
-            // https://www.jquery-az.com/materialize-select-5-demos-learn-works/
-            // https://www.jquery-az.com/materialize/demo.php?ex=58.0_2
-            // (function ($) {
-            //     $(function () {
-            //         // Plugin initialization
-            //         $('select').not('.disabled').formSelect();
-            //     });
-            // })(jQuery); // end of jQuery name space
-
-    </script>
-
     <style>
         footer.page-footer {
             margin-top: 6rem;
         }
     </style>
 
-    <script src="js/conexaoweb3.js"></script>
-    <script src="js/usodeimagem.js"></script>
-    <script>
-        obtemNomeEmpresa();
-    </script>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/municipios_materializecss.js"></script>
+    <!-- <script src="js/conexaoweb3.js"></script> -->
+    <script src="js/iniciativaPopular.js"></script>
+
+
 </body>
 
 </html>
