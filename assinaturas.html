@@ -16,7 +16,7 @@
         <div>
             <form action="#" id="formNomeSignatario" name="formNomeSignatario">
                 <div>
-                    Nome do signtário:
+                    Nome do Signtário:
                 </div>
                 <div>
                     <input type="text" name="campoNomeSignatario" id="campoNomeSignatario" size="100">
@@ -29,7 +29,7 @@
             <br>
             <form action="#" id="formEndereçoSignatario" name="formEndereçoSignatario">
                 <div>
-                    Endereço do signatário:
+                    Endereço do Signatário:
                 </div>
                 <div>
                     <input type="text" name="campoEndereçoSignatario" id="campoEndereçoSignatario" size="200">
@@ -40,6 +40,54 @@
                 </div>
             </form>
              <br>
+            <form action="#" id="formUnidadeDaFerderacao" name="formUnidadeDaFerderacao">
+                <div>
+                    Unidade da Federação:
+                </div>
+                <div>
+                    <select name="UnidadeDaFerderacao">
+	                <option value="AC">Acre</option>
+	                <option value="AL">Alagoas</option>
+	                <option value="AP">Amapá</option>
+	                <option value="AM">Amazonas</option>
+	                <option value="BA">Bahia</option>
+	                <option value="CE">Ceará</option>
+	                <option value="DF">Distrito Federal</option>
+	                <option value="ES">Espírito Santo</option>
+	                <option value="GO">Goiás</option>
+	                <option value="MA">Maranhão</option>
+	                <option value="MT">Mato Grosso</option>
+	                <option value="MS">Mato Grosso do Sul</option>
+	                <option value="MG">Minas Gerais</option>
+	                <option value="PA">Pará</option>
+	                <option value="PB">Paraíba</option>
+	                <option value="PR">Paraná</option>
+	                <option value="PE">Pernambuco</option>
+	                <option value="PI">Piauí</option>
+	                <option value="RJ">Rio de Janeiro</option>
+	                <option value="RN">Rio Grande do Norte</option>
+	                <option value="RS">Rio Grande do Sul</option>
+	                <option value="RO">Rondônia</option>
+	                <option value="RR">Roraima</option>
+	                <option value="SC">Santa Catarina</option>
+	                <option value="SP">São Paulo</option>
+	                <option value="SE">Sergipe</option>
+	                <option value="TO">Tocantins</option>
+                    </select>
+                 </div>
+                <br>
+                <div>
+                    <button onclick="definirAgente(); return false;"> Registrar no Blockchain </button>
+                </div>
+            </form>
+            
+            
+            
+            <form>
+                <input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+                <input type="checkbox" name="vehicle2" value="Car"> I have a car 
+            </form>
+            
             <div id="statusTransacaoNomeEmpresa"></div>
         </div>
     </div>
