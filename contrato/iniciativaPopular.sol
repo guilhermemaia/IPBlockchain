@@ -6,7 +6,17 @@ contract LeiDeIniciativaPopular {
     string public ementaDaProposta;
     string public textoDaProposta;
     address proponente;
-    address assinante;
+    
+    struct signatario {
+        address contaETH;
+        string nomeSignatario;
+	string tituloDeLeleitor;
+	string enderecoSignatario;
+	string unidadeDaFerderacao;
+	
+        bool voted;
+        bool exists;
+    }
 	
     modifier somenteProponente() {
         require(msg.sender==proponente, "Somente o proponente desta iniciativa pode realizar esta operação");
