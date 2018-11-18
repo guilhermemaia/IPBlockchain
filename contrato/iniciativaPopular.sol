@@ -13,12 +13,16 @@ contract LeiDeIniciativaPopular {
 	string tituloDeLeleitor;
 	string enderecoSignatario;
 	string unidadeDaFerderacao;
+	string municipio;
 	
-        bool voted;
-        bool exists;
+        bool assinado;
     }
 	
 	mapping (address => signatario) signatarios;
+	
+	function getSignatarios() returns ( /*HERE*/ ) {
+        return signatarios;
+    }
 	
 	
 	
