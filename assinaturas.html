@@ -1,106 +1,238 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        media="screen,projection" />
+
     <title>Proposta de Lei de Iniciativa Popular</title>
 </head>
+
 <body>
+
     <div class="container">
-        <div>
-            <h1>Página para assinar a Proposta de Lei de Iniciativa Popular: <span id="spanTituloDaProposta"></span></h1>
+
+        <nav>
+            <div class="nav-wrapper green darken-1">
+                <a href="#" class="brand-logo">IPBlockchain</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="proponente.html">Proponente</a></li>
+                    <li><a href="votacao.html">Resultado da Votação</a></li>
+                    <li><a href="todo.md">Todo</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <h4>Assine a Proposta de Lei de Iniciativa Popular: <span id="spanTituloDaProposta"></span></h4>
+            </div>
         </div>
-        <div id="statusConexao"></div>
-        <hr>
-        <div>
-            <form action="#" id="formNomeSignatario" name="formNomeSignatario">
-                <div>
-                    Nome do signtário:
-                </div>
-                <div>
-                    <input type="text" name="campoNomeSignatario" id="campoNomeSignatario" size="100">
-                </div>
-                <br>
-                <div>
-                    <button onclick="registrarNomeEmpresa(); return false;"> Registrar na Blockchain </button>
-                </div>
-            </form>
-            <br>
-	    <form action="#" id="formNumeroTituloDeLeleitor" name="formNumeroTituloDeLeleitor">
-                <div>
-                    Número do título de eleitor:
-                </div>
-                <div>
-                    <input type="number" name="campoNumeroTituloDeLeleitor" id="campoNumeroTituloDeLeleitor" size="20">
-                </div>
-                <br>
-                <div>
-                    <button onclick="registrarNomeEmpresa(); return false;"> Registrar na Blockchain </button>
+
+        <div class="row">
+            <div class="col s10 offset-s1">
+                <p id="statusConexao" class="flow-text"></p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <form class="col s10 offset-s1" action="#" id="formNomeSignatario" name="formNomeSignatario">
+
+                <div class="input-field">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input type="text" name="campoNomeSignatario" id="campoNomeSignatario" size="100" placeholder="Informe seu nome">
+                    <label for="campoNomeSignatario">Nome do signtário:</label>
                 </div>
             </form>
-	    <br>
-            <form action="#" id="formEnderecoSignatario" name="formEnderecoSignatario">
-                <div>
-                    Endereço do signatário:
+
+            <div class="col s10  offset-s1">
+                <button class="btn-small waves-effect waves-light" type="submit" name="action" onclick="registrarNomeEmpresa(); return false;">Nome
+                    na Blockchain
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+        </div> <!-- end Row nome signatário -->
+
+
+        <div class="row">
+
+            <form class="col s10 offset-s1" action="#" id="formNumeroTituloDeLeleitor" name="formNumeroTituloDeLeleitor">
+
+                <div class="input-field">
+                    <i class="material-icons prefix">subtitles</i>
+                    <input type="number" name="campoNumeroTituloDeLeleitor" id="campoNumeroTituloDeLeleitor" size="20"
+                        placeholder="Informe seu número do título de eleitor">
+                    <label for="campoNomeSignatario">Número do título de eleitor:</label>
                 </div>
-                <div>
-                    <input type="text" name="campoEnderecoSignatario" id="campoEnderecoSignatario" size="200">
-                </div>
-                <br>
-                <div>
-                    <button onclick="definirAgente(); return false;"> Registrar na Blockchain </button>
-                </div>
+
             </form>
-             <br>
-            <form action="#" id="formUnidadeDaFerderacao" name="formUnidadeDaFerderacao">
-                <div>
-                    Unidade da Federação:
+
+            <div class="col s10 offset-s1">
+                <button class="btn-small waves-effect waves-light" type="submit" name="action" onclick="registrarNomeEmpresa(); return false;">Número
+                    do título de eleitor na Blockchain
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+        </div> <!-- end Row título de eleitor -->
+
+
+        <div class="row">
+
+            <form class="col s10 offset-s1" action="#" id="formEnderecoSignatario" name="formEnderecoSignatario">
+
+                <div class="input-field">
+                    <i class="material-icons prefix">person_pin_circle</i>
+                    <input type="text" name="campoEnderecoSignatario" id="campoEnderecoSignatario" size="200"
+                        placeholder="Informe seu número do título de eleitor">
+                    <label for="campoNomeSignatario">Endereço do signatário:</label>
                 </div>
-                <div>
-                    <select name="UnidadeDaFerderacao">
-	                <option value="AC">Acre</option>
-	                <option value="AL">Alagoas</option>
-	                <option value="AP">Amapá</option>
-	                <option value="AM">Amazonas</option>
-	                <option value="BA">Bahia</option>
-	                <option value="CE">Ceará</option>
-	                <option value="DF">Distrito Federal</option>
-	                <option value="ES">Espírito Santo</option>
-	                <option value="GO">Goiás</option>
-	                <option value="MA">Maranhão</option>
-	                <option value="MT">Mato Grosso</option>
-	                <option value="MS">Mato Grosso do Sul</option>
-	                <option value="MG">Minas Gerais</option>
-	                <option value="PA">Pará</option>
-	                <option value="PB">Paraíba</option>
-	                <option value="PR">Paraná</option>
-	                <option value="PE">Pernambuco</option>
-	                <option value="PI">Piauí</option>
-	                <option value="RJ">Rio de Janeiro</option>
-	                <option value="RN">Rio Grande do Norte</option>
-	                <option value="RS">Rio Grande do Sul</option>
-	                <option value="RO">Rondônia</option>
-	                <option value="RR">Roraima</option>
-	                <option value="SC">Santa Catarina</option>
-	                <option value="SP">São Paulo</option>
-	                <option value="SE">Sergipe</option>
-	                <option value="TO">Tocantins</option>
+
+            </form>
+
+            <div class="col s10 offset-s1">
+                <button class="btn-small waves-effect waves-light" type="submit" name="action" onclick="definirAgente(); return false;">Endereço
+                    do signatário na Blockchain
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+        </div> <!-- end Row endereço do signatário -->
+
+
+        <div class="row">
+
+            <form action="#" class="col s10 offset-s1" id="formUnidadeDaFerderacao" name="formUnidadeDaFerderacao">
+
+                <div class="input-field">
+                    <i class="material-icons prefix">map</i>
+                    <select name=" UnidadeDaFerderacao">
+                        <option value="" disabled selected>Selecione um Estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
                     </select>
-                 </div>
-                <br>
-                <div>
-                    <button onclick="definirAgente(); return false;"> Registrar na Blockchain </button>
+                    <label>Unidade da Federação:</label>
+
                 </div>
+
             </form>
-                       
-            <div id="statusTransacaoNomeEmpresa"></div>
+
+
+            <div class="col s10 offset-s1">
+                <button class="btn-small waves-effect waves-light" type="submit" name="action" onclick="definirAgente(); return false;">Endereço
+                    do signatário na Blockchain
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+
+        </div> <!-- end Row endereço do signatário -->
+
+    </div> <!-- end of container -->
+
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Sua proposta pode virar lei </h5>
+                    <p class="grey-text text-lighten-4">
+                        De acordo com a Constituição Federal, a sociedade pode apresentar um projeto de lei à Câmara
+                        dos Deputados desde que a proposta seja assinada por um por cento dos eleitores, distribuídos
+                        por pelo menos cinco Estados brasileiros, com não menos de três décimos por cento dos eleitores
+                        de cada um deles.</p>
+
+                    <p class="grey-text text-lighten-4"></p>Conseguidas as assinaturas, o projeto deve ser protocolado
+                    junto à Secretaria-Geral da Mesa da
+                    Câmara dos Deputados.
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="http://www2.camara.leg.br/participacao/sugira-um-projeto">Câmara
+                                dos Deputados</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://www.ethereum.org">Ethereum</a></li>
+                        <li><a class="grey-text text-lighten-3" href="http://etherscan.io">Etherscan</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2019 Copyright
+                <a class="grey-text text-lighten-4 right" href="http://avena.ml">Avena.ml</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+
+        // https://materializecss.com/select.html - com jquery
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+
+            // https://www.jquery-az.com/materialize-select-5-demos-learn-works/
+            // https://www.jquery-az.com/materialize/demo.php?ex=58.0_2
+            // (function ($) {
+            //     $(function () {
+            //         // Plugin initialization
+            //         $('select').not('.disabled').formSelect();
+            //     });
+            // })(jQuery); // end of jQuery name space
+
+    </script>
+
+    <style>
+        footer.page-footer {
+            margin-top: 6rem;
+        }
+    </style>
+
     <script src="js/conexaoweb3.js"></script>
     <script src="js/usodeimagem.js"></script>
     <script>
         obtemNomeEmpresa();
     </script>
 </body>
+
 </html>

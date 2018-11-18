@@ -5,13 +5,14 @@ function verificaConta() {
     var statusConexao = document.getElementById("statusConexao");
     // Verifica o status da conexão 
     if (web3 && web3.isConnected()) {
-        if (web3.eth.accounts[0] == undefined)  {
+        if (web3.eth.accounts[0] == undefined) {
             console.info('Não esta conectado ao Metamask');
-            statusConexao.innerHTML = "Desconectado";  
-        }  else {
+            statusConexao.innerHTML = "Desconectado";
+        } else {
             console.info('Conectado. Qual versão da lib Web3 foi injetado pelo Metamask? ' + web3.version.api);
             contaUsuario = web3.eth.accounts[0];
-            statusConexao.innerHTML = 'Conectado a conta ' + contaUsuario;  
+            // statusConexao.innerHTML = 'Conectado a conta: <br> ' + ${contaUsuario };
+            statusConexao.innerHTML = `Conectado a conta: <br>  ${contaUsuario.slice(0, 20)}...`;
         }
     } else {
         statusConexao.innerHTML = 'Desconectado';
