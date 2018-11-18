@@ -18,6 +18,10 @@ contract LeiDeIniciativaPopular {
         bool exists;
     }
 	
+	mapping (address => signatario) signatarios;
+	
+	
+	
     modifier somenteProponente() {
         require(msg.sender==proponente, "Somente o proponente desta iniciativa pode realizar esta operação");
         _;
@@ -40,7 +44,6 @@ contract LeiDeIniciativaPopular {
         textoDaProposta = qualTextoDaProposta;
     }
     
-    // Informações gerais
+  }   
     
-    mapping (address => signatario) signatarios;
     
