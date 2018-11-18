@@ -40,4 +40,7 @@ contract LeiDeIniciativaPopular {
         textoDaProposta = qualTextoDaProposta;
     }
     
+    // Informações gerais
+    
+    mapping (address => signatario) signatarios;
     
