@@ -20,12 +20,7 @@ contract LeiDeIniciativaPopular {
 	
 	mapping (address => signatario) signatarios;
 	
-	function getSignatarios() returns ( /*HERE*/ ) {
-        return signatarios;
-    }
-	
-	
-	
+		
     modifier somenteProponente() {
         require(msg.sender==proponente, "Somente o proponente desta iniciativa pode realizar esta operação");
         _;
