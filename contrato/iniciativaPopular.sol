@@ -14,14 +14,13 @@ contract LeiDeIniciativaPopular {
 	string enderecoSignatario;
 	string unidadeDaFerderacao;
 	string municipio;
-	
-        bool assinado;
     }
 	
-	mapping (address => signatario) signatarios;
 	
-		
-    modifier somenteProponente() {
+	uint contador_signatarios;
+	mapping (uint => signatario) signatarios;
+	
+	modifier somenteProponente() {
         require(msg.sender==proponente, "Somente o proponente desta iniciativa pode realizar esta operação");
         _;
     }
@@ -43,6 +42,9 @@ contract LeiDeIniciativaPopular {
         textoDaProposta = qualTextoDaProposta;
     }
     
-  }   
+    function novaAssinatura (address _contaETH, string _nomeSignatario, string _tituloDeLeleitor, string _enderecoSignatario, string _unidadeDaFerderacao, string _municipio) public {
+    	signatarios[contador_signatarios] = signatario(_contaETH, _nomeSignatario, _tituloDeLeleitor, _enderecoSignatario, _unidadeDaFerderacao, _municipio);
+    	contador_signatarios++;
+    }
     
-    
+}
