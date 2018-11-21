@@ -47,4 +47,8 @@ contract LeiDeIniciativaPopular {
     	contador_signatarios++;
     }
     
+    function totalDeAssinaturas() public view returns (uint) {
+         return contador_signatarios;
+     }
+    
 }
