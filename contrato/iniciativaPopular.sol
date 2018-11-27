@@ -51,4 +51,8 @@ contract LeiDeIniciativaPopular {
          return contador_signatarios;
      }
     
+    // retorna informações do proponente (não funciona com dados internos de structs)
+    function verProposta() public view returns(string, string, string, address) {
+        return (tituloDaIniciativa, ementaDaProposta, textoDaProposta, proponente);
+    }
 }
