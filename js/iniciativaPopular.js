@@ -138,8 +138,6 @@
 		"type": "function"
 	}
 ]
-}
-];
 
 var contratoLeiDeIniciativaPopular = web3.eth.contract(contratoLeiDeIniciativaPopularABI).at("0x97bfaa4b693df3d0e2452cbf90a1bb577e74b54d");
 
