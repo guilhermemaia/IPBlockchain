@@ -1,4 +1,7 @@
-var contratoLeiDeIniciativaPopular = web3.eth.contract(contratoLeiDeIniciativaPopularABI).at("0xcda2b0c33f34f63fce25844b9224feb0b7374494");
+// recuperando do localstorage
+var enderecoEthereum = localStorage.getItem('enderecoEthereum');
+// var contratoLeiDeIniciativaPopular = web3.eth.contract(contratoLeiDeIniciativaPopularABI).at("0xcda2b0c33f34f63fce25844b9224feb0b7374494");
+var contratoLeiDeIniciativaPopular = web3.eth.contract(contratoLeiDeIniciativaPopularABI).at(enderecoEthereum);
 
 function obterTituloDaIniciativa() {
     contratoLeiDeIniciativaPopular.tituloDaIniciativa({from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado) {
@@ -32,6 +35,7 @@ function novaAssinatura() {
 	//msgAssinatura.innerHTML = "Assinatura realizada, obrigado.";
 
 	// contratoUsoDeImagem.definirNomeDaEmpresa(nomeEmpresa, {from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado)
+	
 	contratoLeiDeIniciativaPopular.novaAssinatura(campoNomeSignatario, campoNumeroTituloDeLeleitor, campoEnderecoSignatario, campoUnidadeDaFerderacao, campoMunicipio, {from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado) {
         if (err)    {
             console.log("Erro");
@@ -43,6 +47,9 @@ function novaAssinatura() {
 						msgAssinatura.innerHTML = `Transação enviada ao Blockchain Ethereum. Faça a monitoração pelo hash: <a href="https://rinkeby.etherscan.io/tx/${resultado}" target="_blank">${resultado}</a>`;
         }
 	});
+
+	localStorage.clear()
+	window.location = "https://guilhermemaia.github.io/IPBlockchain/index.html"
 	
 
 
