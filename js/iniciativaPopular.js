@@ -1,4 +1,4 @@
-  const LeiDeIniciativaPopularABI = [
+  const contratoLeiDeIniciativaPopularABI = [
 	{
 		"constant": false,
 		"inputs": [
@@ -141,7 +141,7 @@
 }
 ];
 
-var LeiDeIniciativaPopular = web3.eth.contract(LeiDeIniciativaPopularABI).at("0x97bfaa4b693df3d0e2452cbf90a1bb577e74b54d");
+var contratoLeiDeIniciativaPopular = web3.eth.contract(contratoLeiDeIniciativaPopularABI).at("0x97bfaa4b693df3d0e2452cbf90a1bb577e74b54d");
 
 function obterTituloDaIniciativa() {
     contratoLeiDeIniciativaPopular.qualTituloDaIniciativa({from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado) {
