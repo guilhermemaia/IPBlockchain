@@ -56,4 +56,6 @@ function novaAssinatura() {
 function obterTotalDeAssinaturas() {
     contratoLeiDeIniciativaPopular.totalDeAssinaturas({from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado) {
 		let objStatus = document.getElementById("totalAssinaturas");
+		console.log(obterTotalDeAssinaturas);
 	}
+}
