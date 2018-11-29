@@ -55,5 +55,4 @@ contract LeiDeIniciativaPopular {
     function verProposta() public view returns(string, string, string, address) {
         return (tituloDaIniciativa, ementaDaProposta, textoDaProposta, proponente);
     }
-
 }
