@@ -51,11 +51,3 @@ function novaAssinatura() {
 	localStorage.clear()
 	window.location = "https://guilhermemaia.github.io/IPBlockchain/index.html"
 }
-
-
-function obterTotalDeAssinaturas() {
-    contratoLeiDeIniciativaPopular.totalDeAssinaturas({from: contaUsuario, gas: 3000000, value: 0}, function (err, resultado) {
-		let objStatus = document.getElementById("totalAssinaturas");
-		console.log(obterTotalDeAssinaturas);
-	}
-}
