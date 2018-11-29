@@ -40,9 +40,25 @@
         </div>
 
         <div class="row card-panel">
-            <div id="msgAssinatura">
+            <div id="tituloDaProposta">
               
             </div>
+
+        </div>
+
+        <div class="row card-panel">
+            <div id="ementaDaProposta">
+              
+            </div>
+
+        </div>
+
+        <div class="row card-panel">
+            <div id="textDaProposta">
+              
+            </div>
+
+
         </div> <!-- end msgAssinatura -->
 
     </div> <!-- end of container -->
@@ -101,8 +117,12 @@
     <script src="js/contratoLeiDeIniciativaPopularABI.js"></script>
     <script src="js/conexaoweb3.js"></script>
     <script src="js/iniciativaPopular.js"></script>
+    <script src="js/monitoramento.js"></script>
     <script>
     obterTituloDaIniciativa();
+    obterTituloDaProposta();
+    obterEmentaDaProposta();
+    obterTextDaProposta();
     console.log(enderecoEthereum);
     </script>
     
