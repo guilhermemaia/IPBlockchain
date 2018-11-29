@@ -48,6 +48,6 @@ function novaAssinatura() {
         }
 	});
 
-	// localStorage.clear()
+	localStorage.clear()
 	window.location = "https://guilhermemaia.github.io/IPBlockchain/totalass.html"
 }
